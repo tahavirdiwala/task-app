@@ -10,7 +10,7 @@ export const AddTask = () => {
     mutationFn: async (data) => {
       return await taskService.add(data);
     },
-    onSuccess: async () => {
+    onSuccess: () => {
       queryClient.invalidateQueries(["fetchTasks"]);
     },
   });
