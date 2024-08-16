@@ -42,7 +42,7 @@ const taskList = async (_, response) => {
       });
     } catch (error) {
       reject(
-        sendResponse(response, StatusCodes.BAD_GATEWAY, "Something Went Wrong")
+        sendResponse(response, StatusCodes.BAD_REQUEST, "Something Went Wrong")
       );
     }
   });
