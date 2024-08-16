@@ -9,3 +9,4 @@ back end part
 > create a validators even if something went wrong on client side
 > create model as per reuirements
 > manage statuscodes as well
+> documented swagger
