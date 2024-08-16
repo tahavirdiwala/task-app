@@ -6,6 +6,7 @@ const cors = require("cors");
 const authRouter = require("./routes/auth");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
+const path = require("path");
 
 const options = {
   definition: {
@@ -18,7 +19,7 @@ const options = {
     servers: [{ url: "http://localhost:5000/api" }],
   },
 
-  apis: ["./routes/*.js"],
+  apis: [path.join(__dirname, "./routes/auth.js")],
 };
 
 const specs = swaggerJsdoc(options);
