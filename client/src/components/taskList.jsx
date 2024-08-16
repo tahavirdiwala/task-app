@@ -2,6 +2,7 @@ import taskService from "../services/task.service";
 import { useQuery } from "@tanstack/react-query";
 
 export const TaskList = () => {
+    
   const {
     data,
     isLoading,
@@ -13,16 +14,16 @@ export const TaskList = () => {
   });
 
   return (
-    <>
+    <div className="tasklist">
       {isLoading ? (
         "...loading"
       ) : (
-        <ul className="list-disc">
-          {data?.data?.data?.map((item) => {
-            return <li key={item?.id}>{item?.name}</li>;
+        <ul >
+          {data?.data?.data?.map((item, index) => {
+            return <li key={index}>{item?.name}</li>;
           })}
         </ul>
       )}
-    </>
+    </div>
   );
 };
